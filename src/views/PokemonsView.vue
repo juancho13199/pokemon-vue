@@ -18,7 +18,7 @@ getData("https://pokeapi.co/api/v2/pokemon/");
   <div class="alert alert-danger mt-2" v-if="error"> {{error}}</div>
   <div v-if="data">
     <ul>
-      <li v-for="pokemon in data.results" :key="pokemon.id"> <router-link :to="`/${pokemon.name}`">{{pokemon.name}}</router-link></li>
+      <li v-for="pokemon in data.results" :key="pokemon.id"> <router-link :to="`/pokemons/${pokemon.name}`">{{pokemon.name}}</router-link></li>
     </ul>
 
     <button :disabled="!data.previous" class="btn btn-primary" @click="getData(data.previous)">Previous</button>

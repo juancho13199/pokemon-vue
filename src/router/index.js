@@ -20,12 +20,20 @@ const router = createRouter({
     }
     ,
     {
-      path: '/:name',
+      path: '/pokemons/:name',
       name: 'pokemon',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/PokemonView.vue')
+    } ,
+    {
+      path: '/favoritos',
+      name: 'favoritos',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/FavoritosView.vue')
     }
     ,
     {
